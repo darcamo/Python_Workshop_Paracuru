@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Note: Uncomment the line bellow to automatically refrech the page on file changes. With this you can use, for instance, "python -m http.server 8000" to serve the presentation during development.
+             DO NOT LEAVE this line in the final version -->
+    <!-- <script type="text/javascript" src="http://livejs.com/live.js"></script> -->
+    <!-- Another alternative is to use the livereload python program. Then you don't need this -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Introdução ao Python</title>
+
+    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/beige.css" id="theme">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
+    <!-- animate.css does not fully work on reveal.js -> google how to do it -->
+    <link rel="stylesheet" href="css/beamer_like_blocks.css">
+    <link rel="stylesheet" href="css/title_page.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <div class="title">Introdução ao Python</div>
+                <p><span class="author">Darlan Cavalcante Moreira<br>
+                        <a href="mailto:darcamo@gmail.com">darcamo@gmail.com</a></span></p>
+                <p><span class="institution"><a href="https://www.gtel.ufc.br">GTEL</a></span></p>
+                <p><span class="date">2018-09-25</span></p>
+                <span class="footnote hide-on-print">Tip: Press 'E' to change to a "print version"</span>
+            </section>
+
+            <section>
+                <section>
+                    <h1>Part 1</h1>
+                </section>
+                <section>
+                    <h1>Slide 1</h1>
+                    <i class="fa fa-shield"></i> haha
+                    <p>lalala</p>
+                </section>
+                <section>
+                    <h1>Slide 2</h1>
+                    <ul>
+                        <li>item 1</li>
+                    </ul>
+                    <p>$$\vtY= \mtH \vtX + \vtN$$</p>
+                    <p>$$y = x^2+3c-z$$</p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>Part 2</h1>
+                </section>
+                <section>
+                    <h1>Slide 3</h1>
+                    lalala lalala lalala lalala lalala lalala lalala
+                    <div class="happy box">
+                        <p>A happy box</p>
+                    </div>
+                    <div class="moody labeled box">
+                        <div class="label">A moody labeled box</div>
+                        <p>bla bla bla</p>
+                    </div>
+                    <div class="angry labeled box">
+                        <div class="label">An angry labeled box</div>
+                        <p>bla bla bla</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h1>Slide 4</h1>
+                    <blockquote>This is a block quote</blockquote>
+                </section>
+
+                <section>
+                    <h1>Slide 5</h1>
+                    <p>This slide has two columns</p>
+
+                    <div class="columns">
+                        <div class="column happy" style="flex-basis:50%;">Column 1</div>
+                        <div class="column moody" style="flex-basis:25%;">Column 2</div>
+                        <div class="column angry" style="flex-basis:25%;">Column 3</div>
+                    </div>
+                </section>
+            </section>
+            <section data-external="slides/slides.html"></section>
+        </div>
+    </div>
+
+    <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+    <script src="node_modules/reveal.js/js/reveal.js"></script>
+
+    <!-- Configure MathJax to add more macros. This must come before MathJax is loaded.
+             Since MathJax is loaded by revealjs, then this script must come before revealjs is initialized
+        -->
+    <script src="js/configure_mathjax.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            height: 900,
+            width: 1600,
+
+            // Factor of the display size that should remain empty around the
+            // content
+            margin: 0.1,
+
+            // Display the page number of the current slide
+            // Slide number formatting can be configured using these variables:
+            //  "h.v": 	horizontal . vertical slide number (default)
+            //  "h/v": 	horizontal / vertical slide number
+            //    "c": 	flattened slide number
+            //  "c/t": 	flattened slide number / total slides
+            slideNumber: "c/t",
+
+            history: true,
+
+            // Turns fragments on and off globally
+            fragments: true,
+
+            // Hides the address bar on mobile devices
+            hideAddressBar: true,
+
+            // Transition style
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Transition speed
+            transitionSpeed: 'default', // default/fast/slow
+
+            // Transition style for full page slide backgrounds
+            backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+            // Number of slides away from the current that are visible
+            viewDistance: 3,
+
+            zoomKey: 'shift',
+
+            zoomPan: false,
+
+            /* center: false, */
+            /*vertically center slides using js (default true) */
+
+            // Uncoment in order to use locally installed MathJax
+            /* math: {
+		        mathjax: '/node_modules/mathjax/MathJax.js', //offline-local
+	            }, */
+
+            external: {
+                async: true
+            },
+
+            menu: {
+                numbers: true,
+                themes: true,
+                themesPath: 'node_modules/reveal.js/css/theme/',
+                transitions: true
+                /* custom: [
+                   { title: 'Custom', icon: '<i class="fa fa-bookmark">', src: 'links.html' },
+                   ] */
+            },
+
+            // Note: Other inetresting plugins to test:
+            //   code-focus
+            //   plugins to add D3, charts, etc
+
+            dependencies: [{
+                    src: 'node_modules/reveal.js/plugin/markdown/marked.js'
+                },
+                {
+                    src: 'node_modules/reveal.js/plugin/markdown/markdown.js'
+                },
+                {
+                    src: 'node_modules/reveal.js/plugin/notes/notes.js',
+                    async: true
+                },
+                {
+                    src: 'node_modules/reveal.js/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function() {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js',
+                    async: true
+                },
+                {
+                    src: 'node_modules/reveal.js/plugin/math/math.js',
+                    async: true
+                },
+                {
+                    src: 'node_modules/reveal.js-menu/menu.js',
+                    async: true
+                },
+                /* See https://github.com/janschoepke/reveal_external */
+                {
+                    src: 'plugin/external.js',
+                    condition: function() {
+                        return !!document.querySelector('[data-external],[data-external-replace]');
+                    }
+                },
+                {
+                    src: 'plugin/pdfexport.js'
+                }, // Press the 'E' key and the print to PDF from Chrome
+                // Note: The title_footer.initialize function can take two parameters:
+                //   title: the title to show in the footer; if null, it will take the h1, h2 and h3 elements of the first slide.
+                //   background: a string of the form 'rgba(0,255,0,0.1)', for the background colour of the footer.
+                {
+                    src: 'plugin/title-footer/title-footer.js',
+                    async: true,
+                    callback: function() {
+                        title_footer.initialize("Introdução ao Python");
+                    }
+                },
+            ]
+        });
+    </script>
+</body>
+
+</html>
