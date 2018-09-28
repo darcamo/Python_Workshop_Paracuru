@@ -19,3 +19,8 @@ Exemplo com código de substituição:
  - um texto grande e troca os caracteres usando o alfabeto embaralhado.
  - Pega outro texto grande na lígua e calcula o histograma de cada letra
  - Substitui a letra mais comum no criptografado pela mais comum no não criptografado e assim por diate
+
+
+
+Porque aprender python
+- Aplicações: youtube, dropbox, machine learning, etc

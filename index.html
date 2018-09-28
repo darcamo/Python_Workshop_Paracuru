@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
     <link rel="stylesheet" href="node_modules/reveal.js/css/theme/beige.css" id="theme">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="css/this_presentation_styles.css" rel="stylesheet" />
 
     <!-- <link rel="stylesheet" href="css/animate.css"> -->
     <!-- animate.css does not fully work on reveal.js -> google how to do it -->
@@ -24,13 +25,16 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
 
+    <!-- My custom polymer element with a terminal and inside python code -->
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="my_polymer_elements/ipython-terminal.js"></script>
 </head>
 
 <body>
     <div class="reveal">
         <div class="slides">
             <section>
-                <div class="title">Introdução ao Python</div>
+                <h1>Introdução ao Python</h1>
                 <p><span class="author">Darlan Cavalcante Moreira<br>
                         <a href="mailto:darcamo@gmail.com">darcamo@gmail.com</a></span></p>
                 <p><span class="institution"><a href="https://www.gtel.ufc.br">GTEL</a></span></p>
@@ -38,62 +42,15 @@
                 <span class="footnote hide-on-print">Tip: Press 'E' to change to a "print version"</span>
             </section>
 
-            <section>
-                <section>
-                    <h1>Part 1</h1>
-                </section>
-                <section>
-                    <h1>Slide 1</h1>
-                    <i class="fa fa-shield"></i> haha
-                    <p>lalala</p>
-                </section>
-                <section>
-                    <h1>Slide 2</h1>
-                    <ul>
-                        <li>item 1</li>
-                    </ul>
-                    <p>$$\vtY= \mtH \vtX + \vtN$$</p>
-                    <p>$$y = x^2+3c-z$$</p>
-                </section>
-            </section>
+            <section data-external="bla_bla_bla.html"></section>
+            <section data-external="slides/introduction.html"></section>
+            <section data-external="slides/instalacao.html"></section>
+            <section data-external="slides/degustacao.html"></section>
+            <section data-external="slides/ipython.html"></section>
+            <!-- <section data-external="slides/jupyter_notebook.html"></section> -->
 
-            <section>
-                <section>
-                    <h1>Part 2</h1>
-                </section>
-                <section>
-                    <h1>Slide 3</h1>
-                    lalala lalala lalala lalala lalala lalala lalala
-                    <div class="happy box">
-                        <p>A happy box</p>
-                    </div>
-                    <div class="moody labeled box">
-                        <div class="label">A moody labeled box</div>
-                        <p>bla bla bla</p>
-                    </div>
-                    <div class="angry labeled box">
-                        <div class="label">An angry labeled box</div>
-                        <p>bla bla bla</p>
-                    </div>
-                </section>
 
-                <section>
-                    <h1>Slide 4</h1>
-                    <blockquote>This is a block quote</blockquote>
-                </section>
 
-                <section>
-                    <h1>Slide 5</h1>
-                    <p>This slide has two columns</p>
-
-                    <div class="columns">
-                        <div class="column happy" style="flex-basis:50%;">Column 1</div>
-                        <div class="column moody" style="flex-basis:25%;">Column 2</div>
-                        <div class="column angry" style="flex-basis:25%;">Column 3</div>
-                    </div>
-                </section>
-            </section>
-            <section data-external="slides/slides.html"></section>
         </div>
     </div>
 
@@ -154,11 +111,13 @@
 
             // Uncoment in order to use locally installed MathJax
             /* math: {
-		        mathjax: '/node_modules/mathjax/MathJax.js', //offline-local
-	            }, */
+		    mathjax: '/node_modules/mathjax/MathJax.js', //offline-local
+	        }, */
 
             external: {
-                async: true
+                // Set this to false!
+                // You get a warning in the browser console, but if the plugin run asynchronously then if might mess change the current slide when you refresh the page
+                async: false
             },
 
             menu: {
@@ -169,6 +128,14 @@
                 /* custom: [
                    { title: 'Custom', icon: '<i class="fa fa-bookmark">', src: 'links.html' },
                    ] */
+            },
+
+            // Plugin to add js visualization to the presentation (not just d3)
+            // https://github.com/gcalmettes/reveal.js-d3
+            reveald3: {
+                // This will prefix the path attributes of the source html paths with the given path.
+                // (by default "src" if set to true or with the specified path if string)
+                mapPath: false, // true / false / "spefific/path/as/string", default: false
             },
 
             // Note: Other inetresting plugins to test:
@@ -202,6 +169,14 @@
                 },
                 {
                     src: 'node_modules/reveal.js-menu/menu.js',
+                    async: true
+                },
+                {
+                    src: 'node_modules/reveald3/reveald3.js',
+                    async: false
+                },
+                {
+                    src: 'plugin/zero-index-main.js',
                     async: true
                 },
                 /* See https://github.com/janschoepke/reveal_external */

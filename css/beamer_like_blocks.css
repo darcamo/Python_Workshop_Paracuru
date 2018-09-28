@@ -47,7 +47,7 @@
    actual text. */
 div.box/* , code */ {
     border-radius: 10px;
-    padding: 0.5rem 3rem 0.5rem 3rem;
+    padding: 0.5em 1em 0.5em 1em;
     /* border: 1px solid #ccc; */
     margin-top: 15px;  /* Set as the amount the label is shifted up */
     margin-bottom: 15px;
@@ -56,18 +56,33 @@ div.box/* , code */ {
     color: black;
 }
 
-div.box.labeled {
+.labeled {
     position: relative;
+}
+
+/* .labeled .label { */
+/*     position: absolute; */
+/*     top: -1em; */
+/* } */
+
+div.box.labeled {
     margin-top: 0.8em;          /*Add some top margin to account for the label (which has absolute positioning */
-    padding-top: 0.4em;         /* Just some extra padding to move the content down a bit to account the label */
+    padding-top: 0.9em;         /* Just some extra padding to move the content down a bit to account the label */
 }
 
 /* The box content must be either a ul or a p */
 div.box p, div.box ul {
     position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.labeled.box .label {
+div.box pre {
+    margin: 0;
+    width: 100%;
+}
+
+.labeled .label {
     position: absolute;
     display: inline-block;
     border-radius: 10px;
@@ -81,27 +96,56 @@ div.box p, div.box ul {
     top: -0.7em;
 }
 
-.angry {
+.angry.box {
     background-color: #FFD7D5;
     border-color: #C43C35;
 }
-.happy {
+.happy.box {
     background-color: #C0E0C0;
     border-color: #46a546;
 }
-.moody {
+.moody.box {
     background-color: #FFECD1;
     border-color: #F89406;
 }
-.box.moody .label {
+.moody .label {
     background-color: #F89406;
 }
-.box.happy .label {
+.happy .label {
     background-color: #46A546;
 }
-.box.angry .label {
+.angry .label {
     background-color: #C43C35;
 }
+
+/* The alert class does not exist alone */
+.moody.alert {
+    color: #F89406;
+}
+.happy.alert {
+    color: #46A546;
+}
+.angry.alert {
+    color: #C43C35;
+}
+
+/* Add the zeropadded class to the same div that has the box class -> Useful to add a pre block inside a labeled box */
+.zeropadded {
+    padding: 0 !important;
+}
+.zeropadded.labeled {
+    margin-top: 1.3em !important;
+}
+.box.zeropadded .label {
+    top: -1.6em;
+    left: 1em;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/* Labeled pre blocks */
+/* Add the labeled class to a pre block */
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 

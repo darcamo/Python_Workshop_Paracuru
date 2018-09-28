@@ -1,0 +1,131 @@
+/* The styles defined here are useful only in this presentation */
+
+
+/* .red { */
+/*     color: #ff2c2d; */
+/* } */
+
+/* .green { */
+/*     color: #17ff2e; */
+/* } */
+
+code-terminal {
+    width: inherit;
+}
+
+.reveal kbd {
+    display: inline-block;
+    margin: 0 .1em;
+    padding: .1em .6em;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 0.8em;
+    line-height: 1.4;
+    color: #242729;
+    text-shadow: 0 1px 0 #FFF;
+    background-color: #e1e3e5;
+    border: 1px solid #adb3b9;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(12,13,14,0.2),0 0 0 2px #FFF inset;
+    white-space: nowrap;
+}
+
+
+/* .fa { */
+/*     margin-left:5px; */
+/*     margin-right:5px; */
+/* } */
+
+/* Se tiver uma tag code dentro de um item de uma lista */
+li>code {
+    color: goldenrod;
+}
+
+/* /\* O padrão de ".reveal pre" é de 90%, mas acho que quando coloco um bloco */
+/*    dentro de um item de uma lista é melhor deixar em auto, que vai pegar */
+/*    100%, já que os itens em uma lista já são um pouco menores. Além disso, */
+/*    adiciona uma pequena margem a direita. *\/ */
+/* .reveal li>pre { */
+/*     width: auto; */
+/*     margin-right: 3%; */
+/* } */
+
+
+/* @media print { */
+/*     li>code { */
+/*         color: #b8860b; */
+/*     } */
+
+/*     .green { */
+/*         color: DarkGreen; */
+/*     } */
+
+/*     .red { */
+/*         color: DarkRed; */
+/*     } */
+
+/*     .ipython-in:before { */
+/*         color: DarkGreen; */
+/*     } */
+
+/*     .ipython-out:before { */
+/*         color: DarkRed; */
+/*     } */
+
+/*     /\* Code block font is too slim in print. Let's make it bolder *\/ */
+/*     pre code { */
+/*         font-weight: 900 !important; */
+/*     } */
+/* } */
+
+/* .reveal .container { */
+/*     display: block; */
+/* } */
+
+/* .reveal .displayed { */
+/*     display: block; */
+/*     margin-left: auto; */
+/*     margin-right: auto; */
+/*     border: none; */
+/*     /\* margin: auto; *\/ */
+/* } */
+
+
+/* .reveal .numpy_table table td{ */
+/*     color: black; */
+/*     border: 1px solid gray; */
+/*     background-color: white; */
+/* } */
+
+
+/* .reveal .container:before { */
+/*     /\* content: ""; *\/ */
+/*     /\* display: inline-block; *\/ */
+/*     /\* vertical-align: middle; *\/ */
+/*     /\* width: 0; *\/ */
+/*     /\* adjust for white space between pseudo element and next sibling *\/ */
+/*     /\* margin-right: -.25em; *\/ */
+/*     /\* stretch line height *\/ */
+/*     /\* height: 100%;  *\/ */
+/* } */
+
+/* .reveal .element { */
+/*     display: inline-block; */
+/*     vertical-align: middle; */
+/*     margin-left: 5px; */
+/*     margin-right: 5px; */
+/*     /\* white-space: normal; *\/ */
+/* } */
+
+
+.reveal .retangulo-preto {
+    /* width:80%; */
+    /* float:center; */
+    background: rgba(155,155,155,0.1);
+    padding: 30px 30px 50px 30px;
+    border-radius: 15px;
+}
+
+
+/* /\* .reveal svg rect:hover, text:hover { *\/ */
+/* /\*     fill:red !important; *\/ */
+/* /\* } *\/ */
