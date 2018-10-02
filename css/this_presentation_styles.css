@@ -10,7 +10,18 @@
 /* } */
 
 code-terminal {
-    width: inherit;
+    width: 100%;
+}
+
+
+/* Add the show-only-if-current-fragment class to any element that should appear
+   only if it is the current fragment */
+.reveal .show-only-if-current-fragment {
+    display: none;
+}
+
+.reveal .show-only-if-current-fragment.visible.current-fragment {
+    display: block;
 }
 
 .reveal kbd {
@@ -81,13 +92,13 @@ li>code {
 /*     display: block; */
 /* } */
 
-/* .reveal .displayed { */
-/*     display: block; */
-/*     margin-left: auto; */
-/*     margin-right: auto; */
-/*     border: none; */
-/*     /\* margin: auto; *\/ */
-/* } */
+.reveal .displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    /* margin: auto; */
+}
 
 
 /* .reveal .numpy_table table td{ */

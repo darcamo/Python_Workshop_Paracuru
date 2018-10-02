@@ -58,8 +58,8 @@
         <li>Outro recurso extremamente útil do IPython são os <a href="http://ipython.readthedocs.io/en/stable/interactive/tutorial.html#magic-functions">comandos mágicos</a></li>
         <li>Alguns dos comandos mágicos mais úteis são:
             <ul>
-                <li><tt class="fragment highlight-green">%whos</tt>: Lista variáveis e funções atuais (não mostra variáveis criadas pelo IPython como <code>_3</code>, <code>_i14</code>, etc)</li>
-                <code-terminal id="code_terminal_whos" dontshowcursor style="font-size:90%;"><in>a = [1,2,3]</in>
+                <li><tt class="fragment grow highlight-green" data-fragment-index="1">%whos</tt>: Lista variáveis e funções atuais (não mostra variáveis criadas pelo IPython como <code>_3</code>, <code>_i14</code>, etc)</li>
+                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="1" cursordisplay="none" style="font-size:90%;"><in>a = [1,2,3]</in>
 <in>b = "Olá Mundo"</in>
 <in>whos
 Variable   Type    Data/Info
@@ -71,11 +71,11 @@ b          str     Hello
 Variable   Type    Data/Info
 ----------------------------
 a          list    n=3</in></code-terminal>
-                <li><tt class="fragment highlight-green">%edit testando.py</tt>: Abre 'testando.py' e executa o código após sair</li>
-                <code-terminal id="code_terminal_edit" dontshowcursor><in>edit testando.py
+                <li><tt class="fragment highlight-green" data-fragment-index="2">%edit testando.py</tt>: Abre 'testando.py' e executa o código após sair</li>
+                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="2" cursordisplay="none"><in>edit testando.py
 Editing... Waiting for Emacs...</in></code-terminal>
-                <li><tt class="fragment highlight-green">%run testando.py</tt>: Executa testando.py como um script <span class="fragment highlight-green"><i class="fa fa-hand-o-right"></i> Também podemos passar opções como "-p" ou "-t"</span></li>
-                <code-terminal id="code_terminal_run" dontshowcursor><in>cat testando.py  # Vamos ver o conteúdo que salvei no arquivo
+                <li><tt class="fragment highlight-green" data-fragment-index="3">%run testando.py</tt>: Executa testando.py como um script <span class="fragment highlight-green" data-fragment-index="4"><i class="fa fa-hand-o-right"></i> Também podemos passar opções como "-p" ou "-t"</span></li>
+                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="3" cursordisplay="none"><in>cat testando.py  # Vamos ver o conteúdo que salvei no arquivo
 a = 10
 b = 20
 print(a * b)</in>
@@ -87,7 +87,7 @@ Variable   Type    Data/Info
 ----------------------------
 a          int     10
 b          int     20</in></code-terminal>
-                <code-terminal id="code_terminal_run_profile" dontshowcursor><in>run -p testando.py</in>
+                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="4" cursordisplay="none"><in>run -p testando.py</in>
 Ordered by: internal time
 
 ncalls  tottime  percall  cumtime  percall filename:lineno(function)
@@ -101,17 +101,17 @@ ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 1    0.000    0.000    0.000    0.000 posixpath.py:145(dirname)
 1    0.000    0.000    0.000    0.000 _bootlocale.py:23(getpreferredenco
 ... ... ...</code-terminal>
-                <li><tt class="fragment highlight-green">%paste</tt>: Cola e executa um bloco de código da área de transferência</li>
-                <li><tt class="fragment highlight-green">%timeit</tt>: Executa uma expressão e mostra tempo decorrido</li>
-                <code-terminal id="code_terminal_timeit" dontshowcursor style="font-size:90%"><in>%timeit 4 * 5
+                <li><tt class="fragment highlight-green" data-fragment-index="5">%paste</tt>: Cola e executa um bloco de código da área de transferência</li>
+                <li><tt class="fragment highlight-green" data-fragment-index="6">%timeit</tt>: Executa uma expressão e mostra tempo decorrido</li>
+                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="6" cursordisplay="none" style="font-size:90%"><in>%timeit 4 * 5
 100000000 loops, best of 3: 12.3 ns per loop</in></code-terminal>
                 <!-- <li><tt class="fragment highlight-green">%macro</tt>: Define um macro para futura execução</li> -->
-                <li><tt class="fragment highlight-green">%autocall</tt>: Dispensa os parêntesis em uma chamada de função</li>
-                <code-terminal id="code_terminal_autocall" dontshowcursor><in>sum [1,2,3]
+                <li><tt class="fragment highlight-green" data-fragment-index="7">%autocall</tt>: Dispensa os parêntesis em uma chamada de função</li>
+                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="7" cursordisplay="none"><in>sum [1,2,3]
 -------> sum([1,2,3])</in>
 <output>6</output></code-terminal>
 
-                <li><tt class="fragment highlight-green">%quickref</tt>: Cartão de referência do IPython <i class="green fa fa-hand-o-right"></i> Veja também <code>%comando?</code></li>
+                <li><tt class="fragment highlight-green" data-fragment-index="8">%quickref</tt>: Cartão de referência do IPython <i class="moody alert fa fa-arrow-right"></i> Veja também <code>%comando?</code></li>
             </ul>
         </li>
     </ul>
