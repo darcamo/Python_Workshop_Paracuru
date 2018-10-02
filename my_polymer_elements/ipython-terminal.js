@@ -82,15 +82,15 @@ class IpythonTerminal extends PolymerElement {
         super();
     }
 
-    ready() {
-        super.ready();
-        //console.log("element is ready");
-        console.log(this.attributes);
-        // if (this.attributes.getNamedItem("dontshowcursor") !== null) {
-        //     console.log("Value is not null");
-        //     window.lala = this;
-        // }
-    }
+    // ready() {
+    //     super.ready();
+    //     //console.log("element is ready");
+    //     console.log(this.attributes);
+    //     // if (this.attributes.getNamedItem("dontshowcursor") !== null) {
+    //     //     console.log("Value is not null");
+    //     //     window.lala = this;
+    //     // }
+    // }
 
     // connectedCallback() {
     //     super.connectedCallback();

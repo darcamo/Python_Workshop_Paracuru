@@ -1,0 +1,78 @@
+
+<section id="modulos_e_scripts">
+    <h1>Módulos e Scripts</h1>
+</section>
+
+<section>
+    <h2>Criando Scripts</h2>
+
+    <ul>
+        <li>Python é uma linguagem interpretada
+            <ul>
+                <li class="fragment">Não precisamos compilar nosso programa</li>
+                <li class="fragment">Podemos executar os comandos
+                    diretamente no terminal
+                    <ul class="fragment">
+                        <li>Mas isso será perdido se fecharmos o terminal</li>
+                    </ul></li>
+
+                <li class="fragment">Se salvarmos o código em
+                    um arquivo (script) poderemos <span class="green">rodar
+                    o programa</span> sempre que quisermos</li>
+            </ul></li>
+        <li class="fragment">Para criar um script basta colocar o código em
+            um arquivo com extensão <code>.py</code></li>
+        <li class="fragment">Rode o interpretador python passando o
+            script como parâmetro
+            <!-- <pre><code class="bash">python meu_script.py</code></pre> -->
+            <code-terminal codeclass="bash" cursordisplay="none">~$ python meu_script.py</code-terminal>
+        </li>
+        <li class="fragment">Nota: É necessário ter o Python instalado no computador</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Criando Módulos</h2>
+
+    <ul>
+        <li>Outra alternativa é criar um <span class="green">módulo</span> e <span class="green">importá-lo</span></li>
+        <li>Supuponha que o arquivo <code>my_funcs.py</code> contém
+            <pre><code class="python">def dobra(x):
+return 2*x
+
+def triplica(x):
+return 3*x</code></pre>É possíve importar as definições do módulo <code>my_funcs</code></li>
+    </ul>
+
+    <code-terminal class="fragment"><in>from my_funcs import dobra, triplica</in>
+<in>dobra(5)</in>
+<output>10</output>
+<in>triplica(5)</in>
+<output>15</output></code-terminal>
+
+    <code-terminal class="fragment"><in>import my_funcs as mf</in>
+<in>mf.dobra(5)</in>
+<output>10</output>
+<in>mf.triplica(5)</in>
+<output>15</output></code-terminal>
+</section>
+
+
+<section>
+
+    <h2>Criando Módulos</h2>
+    <h4>... que também podemos executar</h4>
+
+    <ul>
+        <li>Frequentemente criamos módulos definindo funçoes(, classes, etc)
+            <ul>
+                <li>mas que também queremos poder executar como um script</li>
+            </ul></li>
+        <li>Podemos separar o código que não deve ser executado quando o módulo é improtado
+            <ul>
+                <li>Coloque o código em um block
+                    <pre><code class="python">if __name__ == '__main__':
+    pass</code></pre></li>
+            </ul></li>
+    </ul>
+</section>

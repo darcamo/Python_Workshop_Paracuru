@@ -1,0 +1,157 @@
+
+
+<section id="funções">
+    <h1>Funções</h1>
+</section>
+
+<section>
+    <h2>Definindo novas Funções</h2>
+
+    <!-- <pre><code data-trim>
+         def shout(message="Hi"):
+         print("%s!".format(message))
+
+         shout() # Prints "Hi!"
+         shout("I love python")
+         shout(message="And keyword arguments")
+         </code></pre> -->
+
+    <ul>
+        <li>Funções são definidas com a palavra chave <code>def</code>
+            <code-terminal cursordisplay="none"><in>def fib(n):</in>
+        <span class="fragment" data-fragment-index="1">     """Imprime a série de Fibonacci até n. Essa função não retorna nada."""</span>
+             a, b = 0, 1
+             while a < n:
+                 print(a, end=" ")
+                 a, b = b, a+b
+             print()  # Esse print não está dentro do while
+<in>fib(1000)</in>
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+<span class="fragment" data-fragment-index="3"><in>fib</in>
+&ltfunction __main__.fib&gt
+<in>f = fib</in>
+<in>f</in>
+&ltfunction __main__.fib&gt
+<in>f(1000)  # Chama a função passando 1000 para o parâmetro n</in>
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+</span></code-terminal>
+        </li>
+        <li class="fragment" data-fragment-index="1">A primeira declaração pode ser uma string, que será usada como documentação
+            <ul class="fragment" data-fragment-index="2">
+                <li> Pode ser vista com <code class="python">fib?</code> no IPython ou <code class="python">help(fib)</code></li>
+            </ul></li>
+        <li class="fragment" data-fragment-index="3">Definir uma função introduz a mesma na tabela de símbolos atual</li>
+
+        <!-- <li>Os argumentos das funções podem ter valores padrão</li>
+             <li>Argumentos adicionais com valores padrão podem ser nomeados quando chamados (argumento com palavra chave</li> -->
+    </ul>
+</section>
+
+<section>
+    <h2>Funções com valor de retorno</h2>
+    <ul>
+        <li>Uma função pode ou não ter um <code>return</code></li>
+        <li>Funções sem <code>return</code> retornam <code>None</code></li>
+    </ul>
+    <code-terminal><in>def fib2(n):</in>
+...     """Retorna (lista) a série de Fibonacci até n."""
+...     result = []  # Cria uma lista vazia
+...     a, b = 0, 1
+...     while a < n:
+...         result.append(a)  # Adiciona um elemento na lista
+...         a, b = b, a+b
+...     return result
+...
+<in>f100 = fib2(100)    # chama a função</in>
+<in>f100  # Notem que f100 é uma lista</in>
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]</code-terminal>
+</section>
+
+<section>
+    <h2>Parâmetros com valor padrão</h2>
+
+    <ul>
+        <li>Os parâmetros de uma função podem ter um <span class="green">valor padrão</span></li>
+        <li>Isso permite chamar a função com menos parâmetros do que foram definidos</li>
+
+        <!-- <li>Considere a função que retorna a posição de um
+             móvel dada uma posição inicial, velocidade e
+             aceleração \[s = s_0+v_0 t + \frac{1}{2}a t^2\]</li> -->
+        <li class="fragment" data-fragment-index="1">Exemplo: <span class="green" style="margin-left: 3%;">\(s = s_0+v_0 t + \frac{1}{2}a t^2\)</span>
+            <pre><code class="python" data-external="code/calc_s.py"></code></pre></li>
+        <li class="fragment" data-fragment-index="4">Também é possível especificar um parâmetro pelo nome</li>
+    </ul>
+
+    <code-terminal cursordisplay="none" class="fragment" data-fragment-index="3"><in>calc_s(5)  # Chama a função apenas com o parâmetro obrigatório</in>
+<output>11.25</output>
+<in>calc_s(5, 10)  # Passa os 2 primeiros parâmetros</in>
+<output>21.25</output>
+<span class="fragment" data-fragment-index="4"><in>calc_s(5, 10, a=1.0)  # Passa 't' e 's0' pela posição e 'a' pelo nome</in>
+<output>27.5</output></span></code-terminal>
+    <p class="fragment" data-fragment-index="5">Nota: Não use tipos mutáveis para valores padrão</p>
+</section>
+
+<section>
+    <h2>Funções com quantidade variável de argumentos</h2>
+    <ul>
+        <li>Funções podem aceitar uma quantidade
+            variável de argumentos tanto via posição quanto
+            via palavra chave</li>
+        <li class="fragment">Para isso use o prefixo
+            <code>*</code> e/ou <code>**</code> antes
+            do argumento final</li>
+        <li class="fragment">Se houverem multiplos
+            parâmetros via posição e nome use os dois
+            prefixos
+            <pre><code class="python" data-external="./code/function_def.py"></code></pre></li>
+    </ul>
+
+    <code-terminal cursordisplay="none" class="fragment"><in>my_func(1, 2, 3, "e", "já",  modelo="Fusca", cor="Amarelo")</in>
+1
+2
+(3, 'e', 'já')
+{'cor': 'Amarelo', 'modelo': 'Fusca'}</code-terminal>
+</section>
+
+
+<section>
+    <h2>Exercício</h2>
+    <ul>
+        <li>Crie uma função que recebe duas listas e retorne uma lista contendo a soma elemento-a-elemento de das duas listas (assuma que as duas listas possuem o mesmo número de elementos)</li>
+        <li class="fragment" data-fragment-index="1"><span class="green">Solução</span>:
+            <pre><code class="python" data-external="./code/soma_duas_listas.py"></code></pre>
+        </li>
+        <li class="fragment" data-fragment-index="1">Qual das soluções é melhor?</li>
+    </ul>
+</section>
+
+
+<section>
+        <h2>Exercício</h2>
+        <ul>
+            <li>E se as listas tiverem tamanhos diferentes?</li>
+            <li class="fragment" data-fragment-index="1"><span class="green">Solução</span>:</li>
+        </ul>
+        <pre class="fragment" data-fragment-index="1"><code class="python" data-external="./code/soma_duas_listas2.py"></code></pre>
+</section>
+
+
+<section>
+    <h2>Funções Anônimas: lambda functions</h2>
+
+    <ul>
+        <li>As vezes precisamos efetuar algum cálculo
+            simples, que possivelmente utilizaremos uma
+            única vez logo em seguida</li>
+        <!-- <li class="fragment">Declarar uma função de maneira tradicional
+             poderia ser <strong>trabalho demais só para isso</strong></li> -->
+        <li class="fragment">Nesses casos podemos criar uma "<strong>função anônima</strong>"</li>
+        <li class="fragment">Notação: <code>lambda variáveis: expressão</code>
+            <code-terminal><in>f = lambda a, b: a+b</in>
+<in>f(3, 4)</in>
+<output>7</output>
+<in>f = lambda x: x**2</in>
+<in>f(4)</in>
+<output>16</output></code-terminal></li>
+    </ul>
+</section>

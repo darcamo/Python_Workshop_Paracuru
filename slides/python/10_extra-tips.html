@@ -1,0 +1,67 @@
+
+<section id="dicas_extras">
+    <h1>Dicas Extras</h1>
+</section>
+
+<section>
+        <h2>Dicas Extras</h2>
+        <ul>
+            <li>Escrever código correto nem sempre é uma tarefa fácil</li>
+            <li>Como achamos o problema em um código complexo?
+                <ul>
+                    <li>Utilizar print em diversos pontos</li>
+                    <li>Usar um debugger</li>
+                </ul></li>
+            <li>E como evitamos introduzir novos erros em um programa que está funcionando?
+                <ul>
+                    <li>Unit tests</li>
+                </ul></li>
+        </ul>
+</section>
+
+<section>
+    <h2>Debugando código python</h2>
+    <ul>
+        <li>Falar do pudb</li>
+        <li>falar do spyder</li>
+    </ul>
+</section>
+
+
+<section>
+        <h2>Unit Tests</h2>
+
+        <ul>
+            <li>Unit tests são um tipo particular de testes onde a menor funcionalidade do seu programa é testada</li>
+            <li>Cada unidade de teste deve ser completamente independente</li>
+            <li>Cada teste deve poder rodar de maneira isolada ou como parte de uma "suíte" de testes
+                <ul>
+                    <li>A ordem de execução dos testes não deve importar</li>
+                    <li>Cada teste deve importar seu próprio conjunto de dados independentes dos demais testes</li>
+                </ul></li>
+            <li>Os testes devem rodar rapidamente e de maneira automatizada</li>
+            <li>Ao identificar um bug no seu programa, crie um teste que reproduza o bug só depois conserte o bug</li>
+        </ul>
+</section>
+
+
+<section>
+        <h2>Unit Tests</h2>
+        <h3>O módulo <code>unittests</code> do python</h3>
+        <ul>
+            <li>Python possui o módulo <code>unittests</code></li>
+            <li>Para criar novos casos de teste criamos uma subclasse de unittest.TestCase</li>
+            <li>Estrutura básica para testes</li>
+        </ul>
+        <pre>
+            <code class="python">import unittest
+
+def fun(x):
+    return x + 1
+
+class MyTest(unittest.TestCase):
+    def test_something(self):
+        self.assertEqual(fun(3), 4)</code>
+        </pre>
+
+</section>
