@@ -1,18 +1,21 @@
 /* The styles defined here are useful only in this presentation */
 
 
-/* .red { */
-/*     color: #ff2c2d; */
-/* } */
+.red {
+    color: pink;
+}
 
-/* .green { */
-/*     color: #17ff2e; */
-/* } */
+.green {
+    color: pink;
+}
 
 code-terminal {
     width: 100%;
 }
 
+.reveal pre code {
+    font-size: 1.2em;
+}
 
 /* Add the show-only-if-current-fragment class to any element that should appear
    only if it is the current fragment */
@@ -47,7 +50,7 @@ code-terminal {
 /* } */
 
 /* Se tiver uma tag code dentro de um item de uma lista */
-li>code {
+li>code, .box>code {
     color: goldenrod;
 }
 
@@ -128,13 +131,6 @@ li>code {
 /* } */
 
 
-.reveal .retangulo-preto {
-    /* width:80%; */
-    /* float:center; */
-    background: rgba(155,155,155,0.1);
-    padding: 30px 30px 50px 30px;
-    border-radius: 15px;
-}
 
 
 /* /\* .reveal svg rect:hover, text:hover { *\/ */

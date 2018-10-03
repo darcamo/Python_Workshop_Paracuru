@@ -15,12 +15,12 @@
             inteiros e um para potenciação</li>
         <li class="fragment" data-fragment-index="2">Mas não temos os operadores unários <code>++</code> e <code>--</code></li>
     </ul>
-    <code-terminal cursordisplay="none"><in>a = 1</in>
+    <code-terminal dontshowcursor><in>a = 1</in>
 <in>b = 2</in>
 <in>print(a + b)</in>
 3
 <in>a = 5</in>
-<in>print(a / b)  # 'a' e 'b' são inteiros, mas a divisão é em float</in>
+<in>print(a / b) # 'a' e 'b' são inteiros, mas a divisão é em float</in>
 2.5
 <span class="fragment" data-fragment-index="1"><in>print(a // b)</in>
 2
@@ -36,7 +36,7 @@
         </li>
     </ul>
 
-    <code-terminal cursordisplay="none"><in>a = 1;  b = 2  # Usamos ";" para colocar dois comandos na mesma linha</in>
+    <code-terminal dontshowcursor><in>a = 1;  b = 2  # Usamos ";" para colocar dois comandos na mesma linha</in>
 <in>a == b</in>
 <output>False</output>
 <in>a > b</in>
@@ -51,16 +51,16 @@
     <ul>
         <li>Além deles, temos também os operadores "<code>is</code>" e "<code>in</code>"</li>
     </ul>
-    <code-terminal cursordisplay="none"><in>a is b  # ... mas 'a' e 'b' são variáveis diferentes</in>
+    <code-terminal dontshowcursor><in>a is b  # ... mas 'a' e 'b' são variáveis diferentes</in>
         <output>False</output>
         <in>a = b  # Agora a e b são a mesma variável (modifique um e o outro muda)</in>
         <in>a is b</in>
         <output>True</output>
-        <in>l = [2, 5, 10]</in>
+        <span class="fragment"><in>l = [2, 5, 10]</in>
         <in>5 in l  # O número 5 está na lista 'l'?</in>
         <output>True</output>
         <in>4 in l  # O número 4 está na lista 'l'?</in>
-        <output>False</output></code-terminal>
+        <output>False</output></code-terminal></span>
 </section>
 
 <section>
@@ -72,7 +72,7 @@
         <li class="fragment" data-fragment-index="2">Também temos os operadores lógicos bit-a-bit <code>&</code>, <code>|</code>, <code>^</code>, assim como um operador inverter os bits de um inteiro <code>~</code> </li>
     </ul>
 
-    <code-terminal cursordisplay="none"><in>3 < 5 and 4 <= 2</in>
+    <code-terminal dontshowcursor><in>3 < 5 and 4 <= 2</in>
 <output>False</output>
 <in>3 <= 5 or 4 < 2</in>
 <output>True</output>

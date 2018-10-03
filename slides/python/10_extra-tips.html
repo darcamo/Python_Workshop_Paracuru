@@ -31,37 +31,52 @@
 <section>
         <h2>Unit Tests</h2>
 
-        <ul>
-            <li>Unit tests são um tipo particular de testes onde a menor funcionalidade do seu programa é testada</li>
-            <li>Cada unidade de teste deve ser completamente independente</li>
-            <li>Cada teste deve poder rodar de maneira isolada ou como parte de uma "suíte" de testes
-                <ul>
-                    <li>A ordem de execução dos testes não deve importar</li>
-                    <li>Cada teste deve importar seu próprio conjunto de dados independentes dos demais testes</li>
-                </ul></li>
-            <li>Os testes devem rodar rapidamente e de maneira automatizada</li>
-            <li>Ao identificar um bug no seu programa, crie um teste que reproduza o bug só depois conserte o bug</li>
-        </ul>
+        <div class="happy labeled box">
+            <div class="label">Definição</div>
+            Tipo particular de testes correspondendo a menor parte <em>testável</em> de um programa
+        </div>
+
+        <div class="moody labeled box fragment">
+            <div class="label">Características</div>
+            <ul>
+                <li>Idealmente cada unidade de teste deve ser independente das demais</li>
+                <li>Cada teste deve poder rodar de maneira isolada ou como parte de uma <em>suíte de testes</em>
+                    <ul>
+                        <li>A ordem de execução dos testes <span class="angry alert">não deve importar</span></li>
+                        <li>Cada teste deve importar seu próprio conjunto de dados independentes dos demais testes</li>
+                    </ul></li>
+            </ul>
+        </div>
+
+        <div class="angry labeled box fragment">
+            <div class="label">Importante</div>
+            <ul>
+                <li>Os testes devem rodar rapidamente e de maneira automatizada</li>
+                <li>Ao identificar um bug no seu programa, crie um teste que reproduza o bug só então conserte o bug <span class="happy alert fragment"><i class="fa fa-arrow-right"></i> quando o teste passar o bug foi corrigido</span></li>
+            </ul>
+        </div>
 </section>
 
 
 <section>
         <h2>Unit Tests</h2>
-        <h3>O módulo <code>unittests</code> do python</h3>
+        <h3>O módulo unittests do python</h3>
         <ul>
             <li>Python possui o módulo <code>unittests</code></li>
             <li>Para criar novos casos de teste criamos uma subclasse de unittest.TestCase</li>
-            <li>Estrutura básica para testes</li>
         </ul>
-        <pre>
-            <code class="python">import unittest
 
-def fun(x):
-    return x + 1
+        <div class="moody labeled zeropadded box">
+            <div class="label">Estrutura básica para testes</div>
+            <pre><code class="python" data-external="code/unittest_basic.py"></code></pre>
+        </div>
 
-class MyTest(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(fun(3), 4)</code>
-        </pre>
+        <div class="happy labeled box fragment">
+            <div class="label">Nota</div>
+            Vejam mais na <a href="https://docs.python.org/3/library/unittest.html">documentação do módulo unittest</a>
+        </div>
+
+
+
 
 </section>

@@ -1,21 +1,7 @@
-import {html, PolymerElement} from '../node_modules/@polymer/polymer/polymer-element.js';
+<link rel="import"  href="../bower_components/polymer/polymer.html">
 
-/**
- * `terminal-window`
- * A polymer component similar to a terminal window
- *
- * @customElement
- * @polymer
- * @demo demo/index.html
- */
-class TerminalWindow extends PolymerElement {
-  static get template() {
-    return html`
-      <style>
-        :host {
-          display: block;
-        }
-
+<dom-module id="terminal-tag">
+    <style>
      .example {
          /* min-width: 750px; */
          /* width: 95%; */
@@ -70,25 +56,28 @@ class TerminalWindow extends PolymerElement {
          width: auto;
          /*          white-space: pre-line; */
      }
+    </style>
 
-      </style>
-      <div class="example">
-            <div class="example-title">[[hostname]]</div>
+    <template>
+        <!-- bind to the "machine-name" property -->
+        <div class="example">
+            <div class="example-title">{{hostname}}</div>
             <div class="example-body terminal">
-                <pre><slot></slot></pre>
-            </div>
-      </div>
-    `;
-  }
-  static get properties() {
-    return {
-        hostname: {
-            type: String,
-            value: "darlan@darlan-notebook"
-        },
-    };
-  }
+                <pre><content></content></pre>
+            </div></div>
+    </template>
 
-}
+    <script>
+     Polymer({
+         is: "terminal-tag",
+         properties: {
+             // declare the hostname property
+             hostname: {
+                 type: String,
+                 value: "darlan@darlan-notebook"
+             },
+         }
+     });
+    </script>
 
-window.customElements.define('terminal-window', TerminalWindow);
+</dom-module>

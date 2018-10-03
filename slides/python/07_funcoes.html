@@ -18,33 +18,36 @@
 
     <ul>
         <li>Funções são definidas com a palavra chave <code>def</code>
-            <code-terminal cursordisplay="none"><in>def fib(n):</in>
-        <span class="fragment" data-fragment-index="1">     """Imprime a série de Fibonacci até n. Essa função não retorna nada."""</span>
-             a, b = 0, 1
-             while a < n:
-                 print(a, end=" ")
-                 a, b = b, a+b
-             print()  # Esse print não está dentro do while
-<in>fib(1000)</in>
+            <code-terminal dontshowcursor style="font-size:0.9em;"><in>def fib(n):
+    ...:     <span class="fragment" data-fragment-index="1">"""Imprime a série de Fibonacci até n. Essa função não retorna nada."""</span>
+    ...:     a, b = 0, 1
+    ...:     while a < n:
+    ...:         print(a, end=" ")
+    ...:         a, b = b, a+b
+    ...:     print()  # Esse print não está dentro do while</in>
+                <in>fib(1000)</in>
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
-<span class="fragment" data-fragment-index="3"><in>fib</in>
-&ltfunction __main__.fib&gt
-<in>f = fib</in>
-<in>f</in>
-&ltfunction __main__.fib&gt
-<in>f(1000)  # Chama a função passando 1000 para o parâmetro n</in>
-0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
-</span></code-terminal>
+                <span class="fragment" data-fragment-index="3"><in>fib</in>
+                    &ltfunction __main__.fib&gt
+                    <in>f = fib</in>
+                    <in>f</in>
+                    &ltfunction __main__.fib&gt
+                    <in>f(1000)  # Chama a função passando 1000 para o parâmetro n</in>
+                    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+                </span></code-terminal>
         </li>
-        <li class="fragment" data-fragment-index="1">A primeira declaração pode ser uma string, que será usada como documentação
+        <li class="fragment" data-fragment-index="1">Podemos adicionar uma string no início para documentação <i class="fa fa-arrow-right"></i> <span class="happy alert">chamada de docstring</span>
             <ul class="fragment" data-fragment-index="2">
-                <li> Pode ser vista com <code class="python">fib?</code> no IPython ou <code class="python">help(fib)</code></li>
+                <li> A docstring pode ser vista com <code class="python">fib?</code> no IPython ou <code class="python">help(fib)</code></li>
             </ul></li>
-        <li class="fragment" data-fragment-index="3">Definir uma função introduz a mesma na tabela de símbolos atual</li>
-
         <!-- <li>Os argumentos das funções podem ter valores padrão</li>
              <li>Argumentos adicionais com valores padrão podem ser nomeados quando chamados (argumento com palavra chave</li> -->
     </ul>
+
+    <div class="moody labeled box fragment" data-fragment-index="3">
+        <div class="label">Nota</div>
+        Definir uma função introduz a mesma na tabela de símbolos atual
+    </div>
 </section>
 
 <section>
@@ -53,15 +56,15 @@
         <li>Uma função pode ou não ter um <code>return</code></li>
         <li>Funções sem <code>return</code> retornam <code>None</code></li>
     </ul>
-    <code-terminal><in>def fib2(n):</in>
-...     """Retorna (lista) a série de Fibonacci até n."""
-...     result = []  # Cria uma lista vazia
-...     a, b = 0, 1
-...     while a < n:
-...         result.append(a)  # Adiciona um elemento na lista
-...         a, b = b, a+b
-...     return result
-...
+    <code-terminal><in>def fib2(n):
+    ...:     """Retorna (lista) a série de Fibonacci até n."""
+    ...:     result = []  # Cria uma lista vazia
+    ...:     a, b = 0, 1
+    ...:     while a < n:
+    ...:         result.append(a)  # Adiciona um elemento na lista
+    ...:         a, b = b, a+b
+    ...:     return result
+    ...:</in>
 <in>f100 = fib2(100)    # chama a função</in>
 <in>f100  # Notem que f100 é uma lista</in>
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]</code-terminal>
@@ -71,24 +74,33 @@
     <h2>Parâmetros com valor padrão</h2>
 
     <ul>
-        <li>Os parâmetros de uma função podem ter um <span class="green">valor padrão</span></li>
+        <li>Os parâmetros de uma função podem ter um <span class="happy alert">valor padrão</span></li>
         <li>Isso permite chamar a função com menos parâmetros do que foram definidos</li>
+
+        <div class="happy labeled box fragment zeropadded" data-fragment-index="1">
+            <div class="label">Exemplo</div>
+            Uma função que calcule \(s = s_0+v_0 t + \frac{1}{2}a t^2\)
+            <pre><code class="python" data-external="code/calc_s.py"></code></pre>
+        </div>
 
         <!-- <li>Considere a função que retorna a posição de um
              móvel dada uma posição inicial, velocidade e
              aceleração \[s = s_0+v_0 t + \frac{1}{2}a t^2\]</li> -->
-        <li class="fragment" data-fragment-index="1">Exemplo: <span class="green" style="margin-left: 3%;">\(s = s_0+v_0 t + \frac{1}{2}a t^2\)</span>
-            <pre><code class="python" data-external="code/calc_s.py"></code></pre></li>
+
         <li class="fragment" data-fragment-index="4">Também é possível especificar um parâmetro pelo nome</li>
     </ul>
 
-    <code-terminal cursordisplay="none" class="fragment" data-fragment-index="3"><in>calc_s(5)  # Chama a função apenas com o parâmetro obrigatório</in>
+    <code-terminal dontshowcursor class="fragment" data-fragment-index="3"><in>calc_s(5)  # Chama a função apenas com o parâmetro obrigatório</in>
 <output>11.25</output>
 <in>calc_s(5, 10)  # Passa os 2 primeiros parâmetros</in>
 <output>21.25</output>
 <span class="fragment" data-fragment-index="4"><in>calc_s(5, 10, a=1.0)  # Passa 't' e 's0' pela posição e 'a' pelo nome</in>
 <output>27.5</output></span></code-terminal>
-    <p class="fragment" data-fragment-index="5">Nota: Não use tipos mutáveis para valores padrão</p>
+
+    <div class="angry labeled box fragment" data-fragment-index="5">
+        <div class="label">Nota</div>
+        Não use tipos mutáveis para valores padrão
+    </div>
 </section>
 
 <section>
@@ -106,7 +118,7 @@
             <pre><code class="python" data-external="./code/function_def.py"></code></pre></li>
     </ul>
 
-    <code-terminal cursordisplay="none" class="fragment"><in>my_func(1, 2, 3, "e", "já",  modelo="Fusca", cor="Amarelo")</in>
+    <code-terminal dontshowcursor class="fragment"><in>my_func(1, 2, 3, "e", "já",  modelo="Fusca", cor="Amarelo")</in>
 1
 2
 (3, 'e', 'já')
@@ -115,24 +127,46 @@
 
 
 <section>
-    <h2>Exercício</h2>
-    <ul>
-        <li>Crie uma função que recebe duas listas e retorne uma lista contendo a soma elemento-a-elemento de das duas listas (assuma que as duas listas possuem o mesmo número de elementos)</li>
-        <li class="fragment" data-fragment-index="1"><span class="green">Solução</span>:
-            <pre><code class="python" data-external="./code/soma_duas_listas.py"></code></pre>
-        </li>
-        <li class="fragment" data-fragment-index="1">Qual das soluções é melhor?</li>
-    </ul>
+    <h2>Exercício de Fixação</h2>
+
+    <div class="moody labeled box">
+        <div class="label">Exercício</div>
+        <ul>
+            <li>Crie uma função que recebe duas listas e retorne uma lista contendo a soma elemento-a-elemento das duas listas (assuma que as duas listas possuem o mesmo número de elementos)</li>
+        </ul>
+    </div>
+
+    <div class="happy labeled zeropadded box fragmeng">
+        <div class="label">Solução</div>
+        <pre><code class="python" data-external="./code/soma_duas_listas.py"></code></pre>
+    </div>
+
+    <div class="happy labeled box fragment">
+        <div class="label">Pesquisa de opinião</div>
+        Qual das soluções é melhor?
+    </div>
+
+
+
+
 </section>
 
 
 <section>
-        <h2>Exercício</h2>
+    <h2>Exercício de Fixação</h2>
+
+    <div class="moody labeled box">
+        <div class="label">Exercício</div>
         <ul>
             <li>E se as listas tiverem tamanhos diferentes?</li>
-            <li class="fragment" data-fragment-index="1"><span class="green">Solução</span>:</li>
+            <li>Considere que a lista menor possui zeros no final</li>
         </ul>
-        <pre class="fragment" data-fragment-index="1"><code class="python" data-external="./code/soma_duas_listas2.py"></code></pre>
+    </div>
+
+    <div class="happy labeled zeropadded box fragment">
+        <div class="label">Solução</div>
+        <pre><code class="python" data-external="./code/soma_duas_listas2.py"></code></pre>
+    </div>
 </section>
 
 

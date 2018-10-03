@@ -134,10 +134,10 @@ div.box pre {
     padding: 0 !important;
 }
 .zeropadded.labeled {
-    margin-top: 1.3em !important;
+    margin-top: 1.5em !important;
 }
 .box.zeropadded .label {
-    top: -1.6em;
+    top: -1.5em;
     left: 1em;
 }
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/

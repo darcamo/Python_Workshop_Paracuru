@@ -9,15 +9,15 @@
     <ul>
         <li>Python é uma linguagem interpretada
             <ul>
-                <li class="fragment">Não precisamos compilar nosso programa</li>
-                <li class="fragment">Podemos executar os comandos
+                <li>Não precisamos compilar nosso programa</li>
+                <li>Podemos executar os comandos
                     diretamente no terminal
                     <ul class="fragment">
                         <li>Mas isso será perdido se fecharmos o terminal</li>
                     </ul></li>
 
                 <li class="fragment">Se salvarmos o código em
-                    um arquivo (script) poderemos <span class="green">rodar
+                    um arquivo (script) poderemos <span class="happy alert">rodar
                     o programa</span> sempre que quisermos</li>
             </ul></li>
         <li class="fragment">Para criar um script basta colocar o código em
@@ -25,54 +25,72 @@
         <li class="fragment">Rode o interpretador python passando o
             script como parâmetro
             <!-- <pre><code class="bash">python meu_script.py</code></pre> -->
-            <code-terminal codeclass="bash" cursordisplay="none">~$ python meu_script.py</code-terminal>
+            <code-terminal codeclass="bash" dontshowcursor>~$ python meu_script.py</code-terminal>
         </li>
-        <li class="fragment">Nota: É necessário ter o Python instalado no computador</li>
     </ul>
+
+    <div class="moody labeled box fragment">
+        <div class="label">Nota</div>
+        É necessário ter o Python instalado no computador
+    </div>
+
 </section>
 
 <section>
     <h2>Criando Módulos</h2>
 
     <ul>
-        <li>Outra alternativa é criar um <span class="green">módulo</span> e <span class="green">importá-lo</span></li>
+        <li>Outra alternativa é criar um <span class="happy alert">módulo</span> e <span class="happy alert">importá-lo</span></li>
         <li>Supuponha que o arquivo <code>my_funcs.py</code> contém
             <pre><code class="python">def dobra(x):
-return 2*x
+    return 2*x
 
 def triplica(x):
-return 3*x</code></pre>É possíve importar as definições do módulo <code>my_funcs</code></li>
+    return 3*x</code></pre></li>
+        <li>É possíve importar as definições do módulo <code>my_funcs</code></li>
     </ul>
 
-    <code-terminal class="fragment"><in>from my_funcs import dobra, triplica</in>
+    <div class="columns class">
+    <code-terminal dontshowcursor class="fragment"><in>from my_funcs import dobra, triplica</in>
 <in>dobra(5)</in>
 <output>10</output>
 <in>triplica(5)</in>
 <output>15</output></code-terminal>
 
-    <code-terminal class="fragment"><in>import my_funcs as mf</in>
+    <code-terminal dontshowcursor class="fragment"><in>import my_funcs as mf</in>
 <in>mf.dobra(5)</in>
 <output>10</output>
 <in>mf.triplica(5)</in>
 <output>15</output></code-terminal>
+    </div>
 </section>
 
 
 <section>
 
     <h2>Criando Módulos</h2>
-    <h4>... que também podemos executar</h4>
+    <h4>que também podemos executar</h4>
 
     <ul>
         <li>Frequentemente criamos módulos definindo funçoes(, classes, etc)
             <ul>
                 <li>mas que também queremos poder executar como um script</li>
+                <li>Parte do código deve rodar <span class="angry alert">apenas quando executado como script</span></li>
             </ul></li>
-        <li>Podemos separar o código que não deve ser executado quando o módulo é improtado
-            <ul>
-                <li>Coloque o código em um block
-                    <pre><code class="python">if __name__ == '__main__':
-    pass</code></pre></li>
-            </ul></li>
+        <li>Podemos separar o código que não deve ser executado quando o módulo é importado colocando o mesmo dentro de um <code>if</code> que testa o valor de <code>__name__</code>
     </ul>
+
+    <div class="moody labeled zeropadded box fragment">
+        <div class="label">my_funcs.py</div>
+        <pre><code class="python">def dobra(x):
+    return 2*x
+
+def triplica(x):
+    return 3*x
+
+if __name__ == '__main__':
+    print("O dobro de 4.7 vale", dobra(4.7))
+    print("O triplo de 4.7 vale", triplica(4.7))</code></pre>
+    </div>
+
 </section>

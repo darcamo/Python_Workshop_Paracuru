@@ -26,8 +26,15 @@
     <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
 
     <!-- My custom polymer element with a terminal and inside python code -->
-    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="my_polymer_elements/ipython-terminal.js"></script>
+    <!-- <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+         <script type="module" src="my_polymer_elements/ipython-terminal.js"></script> -->
+
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- My custom polymer element with a terminal and inside python code -->
+    <link rel="import" href="./my_polymer_elements/terminal-tag.html">
+    <link rel="import" href="./my_polymer_elements/code-terminal.html">
+    <link rel="import" href="./my_polymer_elements/cursor-tag.html">
 </head>
 
 <body>
@@ -60,12 +67,12 @@
             <section data-external="slides/python/02_tipos_primitivos.html"></section>
             <section data-external="slides/python/03_entrada_e_saida.html"></section>
             <section data-external="slides/python/04_operadores.html"></section>
-            <!-- <section data-external="slides/python/05_controle_de_fluxo.html"></section> -->
-            <!-- <section data-external="slides/python/06_mais_sobre_tipos_de_dados.html"></section> -->
-            <!-- <section data-external="slides/python/07_funcoes.html"></section> -->
-            <!-- <section data-external="slides/python/08_modulos_e_scripts.html"></section> -->
-            <!-- <section data-external="slides/python/09_exemplos_de_programas.html"></section> -->
-            <!-- <section data-external="slides/python/10_extra-tips.html"></section> -->
+            <section data-external="slides/python/05_controle_de_fluxo.html"></section>
+            <section data-external="slides/python/06_mais_sobre_tipos_de_dados.html"></section>
+            <section data-external="slides/python/07_funcoes.html"></section>
+            <section data-external="slides/python/08_modulos_e_scripts.html"></section>
+            <section data-external="slides/python/09_exemplos_de_programas.html"></section>
+            <section data-external="slides/python/10_extra-tips.html"></section>
 
         </div>
     </div>
