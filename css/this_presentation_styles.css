@@ -136,3 +136,33 @@ li>code, .box>code {
 /* /\* .reveal svg rect:hover, text:hover { *\/ */
 /* /\*     fill:red !important; *\/ */
 /* /\* } *\/ */
+
+
+
+/* Similar to the highlight-green, highlight-red and highlight-blue from reveal, but with the happy, moody and angry colors */
+.reveal .slides section .fragment.highlight-angry,
+.reveal .slides section .fragment.highlight-current-angry,
+.reveal .slides section .fragment.highlight-happy,
+.reveal .slides section .fragment.highlight-current-happy,
+.reveal .slides section .fragment.highlight-moody,
+.reveal .slides section .fragment.highlight-current-moody {
+    opacity: 1;
+    visibility: inherit; }
+
+.reveal .slides section .fragment.highlight-angry.visible {
+    color: #C43C35; }
+
+.reveal .slides section .fragment.highlight-happy.visible {
+    color: #46A546; }
+
+.reveal .slides section .fragment.highlight-moody.visible {
+    color: #F89406; }
+
+.reveal .slides section .fragment.highlight-current-angry.current-fragment {
+    color: #C43C35; }
+
+.reveal .slides section .fragment.highlight-current-happy.current-fragment {
+    color: #46A546; }
+
+.reveal .slides section .fragment.highlight-current-moody.current-fragment {
+    color: #F89406; }

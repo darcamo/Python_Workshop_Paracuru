@@ -18,7 +18,7 @@ Exemplo com código de substituição:
  - Pega dois textos grandes:
  - um texto grande e troca os caracteres usando o alfabeto embaralhado.
  - Pega outro texto grande na lígua e calcula o histograma de cada letra
- - Substitui a letra mais comum no criptografado pela mais comum no não criptografado e assim por diate
+ - Substitui a letra mais comum no criptografado pela mais comum no não criptografado e assim por diante
 
 
 

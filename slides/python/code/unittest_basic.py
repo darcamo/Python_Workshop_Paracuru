@@ -4,7 +4,7 @@ import unittest
 def fun(x):
     return x + 1
 
-
+# Para criar novos casos de teste criamos uma subclasse de unittest.TestCase
 class MyTest(unittest.TestCase):
     def test_something(self):
         self.assertEqual(fun(3), 4)
