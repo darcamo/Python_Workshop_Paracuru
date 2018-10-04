@@ -16,26 +16,25 @@
          shout(message="And keyword arguments")
          </code></pre> -->
 
-    <ul>
-        <li>Funções são definidas com a palavra chave <code>def</code>
-            <code-terminal dontshowcursor style="font-size:0.9em;"><in>def fib(n):
+    <code-terminal dontshowcursor style="font-size:0.85em;"><in>def fib(n):  # Funções são definidas com a palavra chave 'def'
     ...:     <span class="fragment" data-fragment-index="1">"""Imprime a série de Fibonacci até n. Essa função não retorna nada."""</span>
     ...:     a, b = 0, 1
     ...:     while a < n:
     ...:         print(a, end=" ")
     ...:         a, b = b, a+b
     ...:     print()  # Esse print não está dentro do while</in>
-                <in>fib(1000)</in>
+        <in>fib(1000)</in>
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
-                <span class="fragment" data-fragment-index="3"><in>fib</in>
-                    &ltfunction __main__.fib&gt
-                    <in>f = fib</in>
-                    <in>f</in>
-                    &ltfunction __main__.fib&gt
-                    <in>f(1000)  # Chama a função passando 1000 para o parâmetro n</in>
-                    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
-                </span></code-terminal>
-        </li>
+        <span class="fragment" data-fragment-index="3"><in>fib</in>
+            &ltfunction __main__.fib&gt
+            <in>f = fib</in>
+            <in>f</in>
+            &ltfunction __main__.fib&gt
+            <in>f(1000)  # Chama a função passando 1000 para o parâmetro n</in>
+            0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+        </span></code-terminal>
+
+    <ul>
         <li class="fragment" data-fragment-index="1">Podemos adicionar uma string no início para documentação <i class="fa fa-arrow-right"></i> <span class="happy alert">chamada de docstring</span>
             <ul class="fragment" data-fragment-index="2">
                 <li> A docstring pode ser vista com <code class="python">fib?</code> no IPython ou <code class="python">help(fib)</code></li>
@@ -97,10 +96,6 @@
 <span class="fragment" data-fragment-index="4"><in>calc_s(5, 10, a=1.0)  # Passa 't' e 's0' pela posição e 'a' pelo nome</in>
 <output>27.5</output></span></code-terminal>
 
-    <div class="angry labeled box fragment" data-fragment-index="5">
-        <div class="label">Nota</div>
-        Não use tipos mutáveis para valores padrão
-    </div>
 </section>
 
 <section>
@@ -123,6 +118,27 @@
 2
 (3, 'e', 'já')
 {'cor': 'Amarelo', 'modelo': 'Fusca'}</code-terminal>
+</section>
+
+
+<section>
+    <h2>Observação</h2>
+
+    <ul>
+        <li>Qual o problema do código abaixo?</li>
+        <li class="fragment">Vamos rodar no IPython e ver o que acontece</li>
+    </ul>
+
+    <pre><code>def append_valor(*values, l=[]):
+    """Adiciona o valor 'v' no final da lista 'l'"""
+    l.extend(values)
+    return l</code></pre>
+
+    <div class="angry labeled box fragment" style="margin-top:3em; margin-bottom:3em;">
+        <div class="label">Importante</div>
+        Não use tipos mutáveis como valor padrão de argumentos
+    </div>
+
 </section>
 
 

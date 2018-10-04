@@ -1,12 +1,27 @@
 /* The styles defined here are useful only in this presentation */
 
-
-.red {
-    color: pink;
+/* DEBUG ONLY -> O conteúdo deve ficar dentro do retângulo */
+.reveal.debug  section {
+    background-color: rgb(0,0,0,0.2);
+    max-height: 860px;
 }
 
+/* TODO: Faça uma busca se realmente você usa essa classe */
+.extra-top-bottom-margin {
+    margin-top: 3em !important;
+    margin-bottom: 3em !important;
+}
+
+/* DEBUG: */
+.red {
+    color: pink;
+    background-color: pink;
+}
+
+/* DEBUG */
 .green {
     color: pink;
+    background-color: pink;
 }
 
 code-terminal {
@@ -22,8 +37,8 @@ code-terminal {
 .reveal .show-only-if-current-fragment {
     display: none;
 }
-
-.reveal .show-only-if-current-fragment.visible.current-fragment {
+.reveal .show-only-if-current-fragment.visible.current-fragment,
+.reveal .visible.current-fragment .show-only-if-current-fragment {
     display: block;
 }
 

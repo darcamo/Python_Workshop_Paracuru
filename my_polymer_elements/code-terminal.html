@@ -18,13 +18,13 @@
          white-space:pre-line;
      }
 
-     code ::slotted(in) {
+     code ::slotted(in), code ::slotted(* in) {
          margin-top: 10px;
          display: inline-block;
          white-space: pre;
      }
 
-     code ::slotted(output) {
+     code ::slotted(output), code ::slotted(* output) {
          white-space: pre;
      }
      code>::slotted(in):first-of-type {

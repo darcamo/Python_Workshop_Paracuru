@@ -125,10 +125,10 @@ Cunha está atualmente preso</code-terminal></li>
     <div class="angry labeled box fragment">
         <div class="label">Nota</div>
         Podemos indexar strings, mas <span class="happy alert">strings são imutáveis</span>
-        <ul>
-            <li>Não podemos modificar uma letra de uma string <span class="happy alert"><i class="fa fa-arrow-right"></i> Tentem!</span></li>
-            <li>Precisamos criar uma nova string nesse caso</li>
-        </ul>
+        <!-- <ul>
+             <li>Não podemos modificar uma letra de uma string <span class="happy alert"><i class="fa fa-arrow-right"></i> Tentem!</span></li>
+             <li>Precisamos criar uma nova string nesse caso</li>
+             </ul> -->
     </div>
 
 
@@ -330,12 +330,15 @@ Cunha está atualmente preso</code-terminal></li>
         <li>use <code>d.items()</code> para retornar uma "lista de pares" de chave e valor que pode ser usada em um <code>for</code>, por exemplo</li>
     </ul>
     <pre><code class="python" data-external="code/dicionario.py"></code></pre>
-    <p>Exemplo
-        <code-terminal><in>for chave, valor in d.items():</in>
+
+    <div class="happy labeled zeropadded box">
+        <div class="label">Exemplo</div>
+        <code-terminal dontshowcursor><in>for chave, valor in d.items():</in>
              print("{0}: {1}".format(chave, valor))
 e: 2.718282
 pi: 3.141592
-número de ouro: 1.618</code-terminal></p>
+número de ouro: 1.618</code-terminal>
+    </div>
 </section>
 
 
@@ -376,12 +379,12 @@ número de ouro: 1.618</code-terminal></p>
             duplicados</span></li>
         <li class="fragment" data-fragment-index="1">Criamos um conjunto usando chaves ou usando <code>set</code></li>
         <li class="fragment" data-fragment-index="2">Ações
-            básicas: <span class="fragment highlight-current-green" data-fragment-index="2">testar pertinência</span>, <span class="fragment highlight-current-green" data-fragment-index="3">união,</span> <span class="fragment highlight-current-green" data-fragment-index="4">interseção,</span> <span class="fragment highlight-current-green" data-fragment-index="5">diferença</span> <span class="fragment highlight-current-green" data-fragment-index="6">e diferença simétrica</span></li>
+            básicas: <span class="fragment highlight-current-happy" data-fragment-index="2">testar pertinência</span>, <span class="fragment highlight-current-happy" data-fragment-index="3">união,</span> <span class="fragment highlight-current-happy" data-fragment-index="4">interseção,</span> <span class="fragment highlight-current-happy" data-fragment-index="5">diferença</span> <span class="fragment highlight-current-happy" data-fragment-index="6">e diferença simétrica</span></li>
     </ul>
 
     <code-terminal dontshowcursor class="fragment" data-fragment-index="1" style="font-size: 0.9em;"><in>cesta = {'maçã', 'laranja', 'maçã', 'pera', 'laranja', 'banana'}</in>
-<in>print(cesta)  # Perceba que duplicatas foram eliminadas</in>
-{'pera', 'banana', 'laranja', 'maçã'}
+        <in>print(cesta)  # Perceba que duplicatas foram eliminadas
+{'pera', 'banana', 'laranja', 'maçã'}</in>
 <span class="fragment" data-fragment-index="2"><in>'laranja' in cesta</in>
 <output>True</output>
 <in>'limão' in frutas</in>

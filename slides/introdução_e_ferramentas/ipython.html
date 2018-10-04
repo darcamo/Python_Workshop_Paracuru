@@ -66,40 +66,41 @@
 <section>
     <h2>IPython</h2>
 
-    <ul>
+    <ul style="height:600px !important;">
         <li>Outro recurso extremamente útil do IPython são os <a href="http://ipython.readthedocs.io/en/stable/interactive/tutorial.html#magic-functions">comandos mágicos</a></li>
         <li>Alguns dos comandos mágicos mais úteis são:
             <ul>
-                <li><tt class="fragment grow highlight-current-happy" data-fragment-index="1">%whos</tt>: Lista variáveis e funções atuais <i class="fa fa-arrow-right"></i> exceto variáveis criadas pelo IPython</li>
-                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="1" dontshowcursor style="font-size:90%;"><in>a = [1,2,3]</in>
-<in>b = "Olá Mundo"</in>
-<in>whos
+                <li class="fragment highlight-current-happy" data-fragment-index="1"><tt>%whos</tt>: Lista variáveis e funções atuais <i class="fa fa-arrow-right"></i> exceto variáveis criadas pelo IPython
+                    <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size:90%;"><in>a = [1,2,3]</in>
+                        <in>b = "Olá Mundo"</in>
+                        <in>whos
 Variable   Type    Data/Info
 ----------------------------
 a          list    n=3
 b          str     Hello
-</in>
-<in>whos list
+                        </in>
+                        <in>whos list
 Variable   Type    Data/Info
 ----------------------------
 a          list    n=3</in></code-terminal>
-                <li><tt class="fragment highlight-current-happy" data-fragment-index="2">%edit testando.py</tt>: Abre 'testando.py' e executa o código após sair</li>
-                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="2" dontshowcursor><in>edit testando.py
-Editing... Waiting for Emacs...</in></code-terminal>
-                <li><tt class="fragment highlight-current-happy" data-fragment-index="3">%run testando.py</tt>: Executa testando.py como um script <span class="fragment highlight-current-happy" data-fragment-index="4"><i class="fa fa-arrow-right"></i> Também podemos passar opções como "-p" ou "-t"</span></li>
-                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="3" dontshowcursor><in>cat testando.py  # Vamos ver o conteúdo que salvei no arquivo
+                </li>
+                <li class="fragment highlight-current-happy" data-fragment-index="2"><tt>%edit testando.py</tt>: Abre 'testando.py' e executa o código após sair
+                    <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size: 90%;"><in>edit testando.py
+Editing... Waiting for Emacs...</in></code-terminal></li>
+                <li class="fragment highlight-current-happy" data-fragment-index="3"><tt>%run testando.py</tt>: Executa testando.py como um script <span class="fragment highlight-current-happy" data-fragment-index="4"><i class="fa fa-arrow-right"></i> Também podemos passar opções como "-p" ou "-t"</span>
+                    <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size: 90%;"><in>cat testando.py  # Vamos ver o conteúdo que salvei no arquivo
 a = 10
 b = 20
 print(a * b)</in>
-<in>run testando.py  # TAB completa o nome do arquivo
+                        <in>run testando.py  # TAB completa o nome do arquivo
 200
-</in>
-<in>whos
+                        </in>
+                        <in>whos
 Variable   Type    Data/Info
 ----------------------------
 a          int     10
 b          int     20</in></code-terminal>
-                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="4" dontshowcursor><in>run -p testando.py</in>
+                    <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="4" dontshowcursor style="font-size: 85%;"><in>run -p testando.py</in>
 Ordered by: internal time
 
 ncalls  tottime  percall  cumtime  percall filename:lineno(function)
@@ -112,18 +113,17 @@ ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 1    0.000    0.000    0.000    0.000 posixpath.py:318(normpath)
 1    0.000    0.000    0.000    0.000 posixpath.py:145(dirname)
 1    0.000    0.000    0.000    0.000 _bootlocale.py:23(getpreferredenco
-... ... ...</code-terminal>
-                <li><tt class="fragment highlight-current-happy" data-fragment-index="5">%paste</tt>: Cola e executa um bloco de código da área de transferência</li>
-                <li><tt class="fragment highlight-current-happy" data-fragment-index="6">%timeit</tt>: Executa uma expressão e mostra tempo decorrido</li>
-                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="6" dontshowcursor style="font-size:90%"><in>%timeit 4 * 5
-100000000 loops, best of 3: 12.3 ns per loop</in></code-terminal>
-                <!-- <li><tt class="fragment highlight-current-happy">%macro</tt>: Define um macro para futura execução</li> -->
-                <li><tt class="fragment highlight-current-happy" data-fragment-index="7">%autocall</tt>: Dispensa os parêntesis em uma chamada de função</li>
-                <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="7" dontshowcursor><in>sum [1,2,3]
+... ... ...</code-terminal></li>
+                <li class="fragment highlight-current-happy" data-fragment-index="5"><tt>%paste</tt>: Cola e executa um bloco de código da área de transferência</li>
+                <li class="fragment highlight-current-happy" data-fragment-index="6"><tt>%timeit</tt>: Executa uma expressão e mostra tempo decorrido
+                    <code-terminal class="show-only-if-current-fragment" dontshowcursor><in>%timeit 4 * 5
+100000000 loops, best of 3: 12.3 ns per loop</in></code-terminal></li>
+                <li class="fragment highlight-current-happy" data-fragment-index="7"><tt>%autocall</tt>: Dispensa os parêntesis em uma chamada de função
+                    <code-terminal class="show-only-if-current-fragment" dontshowcursor><in>sum [1,2,3]
 -------> sum([1,2,3])</in>
-<output>6</output></code-terminal>
+                            <output>6</output></code-terminal></li>
 
-                <li><tt class="fragment highlight-current-happy" data-fragment-index="8">%quickref</tt>: Cartão de referência do IPython <i class="fa fa-arrow-right"></i> Veja também <tt>%comando?</tt></li>
+                <li class="fragment highlight-current-happy" data-fragment-index="8"><tt>%quickref</tt>: Cartão de referência do IPython <i class="fa fa-arrow-right"></i> Veja também <tt>%comando?</tt></li>
             </ul>
         </li>
     </ul>
