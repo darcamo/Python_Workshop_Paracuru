@@ -26,10 +26,10 @@
         <in>fib(1000)</in>
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
         <span class="fragment" data-fragment-index="3"><in>fib</in>
-            &ltfunction __main__.fib&gt
+            <output>&ltfunction __main__.fib&gt</output>
             <in>f = fib</in>
             <in>f</in>
-            &ltfunction __main__.fib&gt
+            <output>&ltfunction __main__.fib&gt</output>
             <in>f(1000)  # Chama a função passando 1000 para o parâmetro n</in>
             0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
         </span></code-terminal>
@@ -76,9 +76,9 @@
         <li>Os parâmetros de uma função podem ter um <span class="happy alert">valor padrão</span></li>
         <li>Isso permite chamar a função com menos parâmetros do que foram definidos</li>
 
-        <div class="happy labeled box fragment zeropadded" data-fragment-index="1">
+        <div class="happy labeled box fragment" data-fragment-index="1">
             <div class="label">Exemplo</div>
-            Uma função que calcule \(s = s_0+v_0 t + \frac{1}{2}a t^2\)
+            <p>Uma função que calcule \(s = s_0+v_0 t + \frac{1}{2}a t^2\)</p>
             <pre><code class="python" data-external="code/calc_s.py"></code></pre>
         </div>
 
@@ -122,7 +122,7 @@
 
 
 <section>
-    <h2>Observação</h2>
+    <h2>Observação sobre valor padrão</h2>
 
     <ul>
         <li>Qual o problema do código abaixo?</li>
@@ -152,15 +152,15 @@
         </ul>
     </div>
 
-    <div class="happy labeled zeropadded box fragmeng">
+    <div class="happy labeled zeropadded box fragment">
         <div class="label">Solução</div>
         <pre><code class="python" data-external="./code/soma_duas_listas.py"></code></pre>
     </div>
 
-    <div class="happy labeled box fragment">
-        <div class="label">Pesquisa de opinião</div>
-        Qual das soluções é melhor?
-    </div>
+    <!-- <div class="happy labeled box fragment">
+         <div class="label">Pesquisa de opinião</div>
+         Qual das soluções é melhor?
+         </div> -->
 
 
 

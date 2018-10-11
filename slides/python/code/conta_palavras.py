@@ -1,4 +1,4 @@
-texto = '''"Aonde fica a saída?", Perguntou Alice ao gato que ria.
+texto = '''"Onde fica a saída?", Perguntou Alice ao gato que ria.
 "Depende", respondeu o gato.
 "De quê?", replicou Alice;
 "Depende de para onde você quer ir..."'''

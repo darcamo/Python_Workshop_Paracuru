@@ -12,16 +12,20 @@
     margin-bottom: 3em !important;
 }
 
-/* DEBUG: */
-.red {
-    color: pink;
-    background-color: pink;
-}
+/* /\* DEBUG: *\/ */
+/* .red { */
+/*     color: pink; */
+/*     background-color: pink; */
+/* } */
 
-/* DEBUG */
-.green {
-    color: pink;
-    background-color: pink;
+/* /\* DEBUG *\/ */
+/* .green { */
+/*     color: pink; */
+/*     background-color: pink; */
+/* } */
+
+.reveal .box ul+pre, .reveal .box p+pre {
+    margin-top: 1em;
 }
 
 code-terminal {

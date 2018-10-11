@@ -39,10 +39,15 @@
     ...: <span style="white-space: pre;">Um tigre
     ...: dois tigres
     ...: três tigres"""</span>)</in></code-terminal></li>
-        <li class="fragment">Strings possuem muitos métodos úteis, como <code>format</code>, <code>split</code>, <code>join</code>, <code>strip</code>, <code>lower</code>, etc
-            <code-terminal dontshowcursor class="python"><in>nome = "Cunha"</in>
+        <li class="fragment">Strings possuem muitos métodos úteis, como
+            <a href="https://docs.python.org/3/library/stdtypes.html#str.format"><code>format</code></a>,
+            <a href="https://docs.python.org/3/library/stdtypes.html#str.split"><code>split</code></a>,
+            <a href="https://docs.python.org/3/library/stdtypes.html#str.join"><code>join</code></a>,
+            <a href="https://docs.python.org/3/library/stdtypes.html#str.strip"><code>strip</code></a>,
+            <a href="https://docs.python.org/3/library/stdtypes.html#str.lower"><code>lower</code></a>, etc
+            <code-terminal dontshowcursor class="python"><in>nome = "cunha"</in>
 <in>situação = "preso"</in>
-<in>print("{0} está atualmente {1}".format(nome, situação))</in>
+<in>print("{0} está atualmente {1}".format(nome.capitalize(), situação))</in>
 Cunha está atualmente preso</code-terminal></li>
     </ul>
     <div class="moody labeled box fragment">
@@ -110,7 +115,7 @@ Cunha está atualmente preso</code-terminal></li>
         <li>Python possui vários tipos compostos,
             usados para agrupar outros valores.</li>
         <li class="fragment">O mais versátil de todos é a lista
-            <code-terminal dontshowcursor class="python"><in>l1 = [15, 34.5, 44]  # itens são separados por vírgulas</in>
+            <code-terminal dontshowcursor class="python"><in>l1 = [15, 34.5, [44, 55]]  # itens são separados por vírgulas</in>
 <in>l2 = ["Brasil", "Estados Unidos", "Japão", "França"]</in>
 <in>l3 = [1, 2, "três", "quatro"]  # Itens podem ter tipos diferentes</in></code-terminal></li>
         <aside class="notes">Listas podem conter itens de diferentes tipos, mas normalmente todos os itens possuem o mesmo tipo</aside>
@@ -144,10 +149,13 @@ Cunha está atualmente preso</code-terminal></li>
             lista para pegar um elemento em particular ou
             uma fatia (slice)</li>
         <li class="fragment" data-fragment-index="1">Também é possível
-            concatenar duas listas com o operador <code>+</code> assim como fazemos com strings</li>
-        <li class="fragment" data-fragment-index="2">Uma operação comum em um lista consiste em adicionar um ou mais elementos: use os métodos <code>append</code> e <code>extend</code></li>
+            concatenar duas listas com o operador <code>+</code></li>
+        <li class="fragment" data-fragment-index="2">Uma operação comum em um lista consiste em adicionar um ou mais elementos
+            <ul>
+                <li>Use os métodos <code>append</code> e <code>extend</code></li>
+            </ul></li>
     </ul>
-    <code-terminal class="fragment" data-fragment-index="2"><in>a = [1, 5, 10]</in>
+    <code-terminal dontshowcursor class="fragment" data-fragment-index="2"><in>a = [1, 5, 10]</in>
 <in>a.append(15)  # Adiciona o número 15 na lista</in>
 <in>print(a)</in>
 [1, 5, 10, 15]
@@ -155,6 +163,11 @@ Cunha está atualmente preso</code-terminal></li>
 <in>a.extend(b)  # Adiciona os elementos da lista 'b' na lista 'a'</in>
 <in>print(a)</in>
 [1, 5, 10, 15, 100, 200]</code-terminal>
+
+    <div class="moody labeled box fragment">
+        <div class="label">Nota</div>
+        <code>a.append(b)</code> adicionaria a lista <code>[100, 200]</code> como elemento de <code>a</code>
+    </div>
 </section>
 
 <section>
@@ -185,7 +198,7 @@ Cunha está atualmente preso</code-terminal></li>
 
     <ul>
         <!-- <li>Esse é o 4 slide sobre listas <i class="fa fa-arrow-right"></i> Elas são realmente flexíveis</li> -->
-        <li>É comum querermos construir uma lista efetuando uma operação em cada elemento de outra lista</li>
+        <li>É comum querermos <span class="happy alert">construir</span> uma lista efetuando uma operação em cada elemento de um container (possivelmente outra lista)</li>
         <li class="fragment" data-fragment-index="1">Para isso Python forcece o conceito de <span class="happy alert">list comprehensions</span></li>
         <li class="fragment" data-fragment-index="3">Suponha que queremos criar um conjunto com valores definidos por \(\{x^2 : x \in \{0, ..., 9\}\}\)</li>
         <li class="fragment happy alert" data-fragment-index="4">E se quisermos o quadrado apenas dos números pares?</li>
@@ -206,7 +219,8 @@ Cunha está atualmente preso</code-terminal></li>
 
 
 <section>
-    <h2>Exercício de Fixação</h2>
+    <h2>Listas</h2>
+    <!-- <h3>Exercício de Fixação</h3> -->
 
     <div class="moody labeled box">
         <div class="label">Exercício</div>
@@ -218,7 +232,10 @@ Cunha está atualmente preso</code-terminal></li>
 
     <div class="angry labeled box">
         <div class="label">Nota</div>
-        Um time não pode jogar contra ele mesmo
+        <ul>
+            <li>Deve haver tanto o jogo "Time1 x Time2" quanto "Time2 x Time1"</li>
+            <li>Um time não pode jogar contra ele mesmo</li>
+        </ul>
     </div>
 
     <div class="happy labeled zeropadded box fragment">
@@ -229,7 +246,8 @@ Cunha está atualmente preso</code-terminal></li>
 
 
 <section>
-    <h2>Exercício de Fixação</h2>
+    <h2>Listas</h2>
+    <!-- <h3>Exercício de Fixação</h3> -->
 
     <div class="moody labeled box">
         <div class="label">Exercício</div>
@@ -246,8 +264,8 @@ Cunha está atualmente preso</code-terminal></li>
 
 
 <section>
-
-    <h2>Exercício de Fixação</h2>
+    <h2>Listas</h2>
+    <!-- <h3>Exercício de Fixação</h3> -->
 
     <div class="moody labeled box">
         <div class="label">Exercício</div>
@@ -333,17 +351,18 @@ Cunha está atualmente preso</code-terminal></li>
 
     <div class="happy labeled zeropadded box">
         <div class="label">Exemplo</div>
-        <code-terminal dontshowcursor><in>for chave, valor in d.items():</in>
-             print("{0}: {1}".format(chave, valor))
+        <code-terminal dontshowcursor><in>for chave, valor in d.items():
+    ...:     print("{0}: {1}".format(chave, valor))
 e: 2.718282
 pi: 3.141592
-número de ouro: 1.618</code-terminal>
+número de ouro: 1.618</in></code-terminal>
     </div>
 </section>
 
 
 <section>
-    <h2>Exercício de Fixação</h2>
+    <h2>Dicionários</h2>
+    <!-- <h3>Exercício de Fixação</h3> -->
 
     <div class="moody labeled box">
         <div class="label">Exercício</div>
@@ -373,11 +392,10 @@ número de ouro: 1.618</code-terminal>
     <h2>Conjuntos</h2>
 
     <ul>
-        <li>Um conjunto em python é uma coleção de
-            items <span class="happy alert">sem ordem
+        <li>Coleção de items <span class="happy alert">sem ordem
             definida</span> e <span class="happy alert">sem elementos
             duplicados</span></li>
-        <li class="fragment" data-fragment-index="1">Criamos um conjunto usando chaves ou usando <code>set</code></li>
+        <li class="fragment" data-fragment-index="1">Criamos um conjunto usando chaves ou usando <code>set</code> ou com <code>{}</code></li>
         <li class="fragment" data-fragment-index="2">Ações
             básicas: <span class="fragment highlight-current-happy" data-fragment-index="2">testar pertinência</span>, <span class="fragment highlight-current-happy" data-fragment-index="3">união,</span> <span class="fragment highlight-current-happy" data-fragment-index="4">interseção,</span> <span class="fragment highlight-current-happy" data-fragment-index="5">diferença</span> <span class="fragment highlight-current-happy" data-fragment-index="6">e diferença simétrica</span></li>
     </ul>

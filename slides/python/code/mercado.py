@@ -8,5 +8,5 @@ minhas_compras = {"banana prata": 1.2,
                   "uva red glob": 0.6}
 
 # Usa um list comprehension para gerar uma lista e soma os seus valores
-conta = sum([precos[fruta] * minhas_compras[fruta] for fruta in minhas_compras])
-print("Eu precisei pagar o total de R$ {0:.2f} em frutas".format(conta))
+conta = sum([precos[fruta] * quantidade for fruta, quantidade in minhas_compras.items()])
+print("Total a pargar: R$ {0:.2f}".format(conta))

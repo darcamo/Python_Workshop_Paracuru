@@ -73,34 +73,34 @@
                 <li class="fragment highlight-current-happy" data-fragment-index="1"><tt>%whos</tt>: Lista variáveis e funções atuais <i class="fa fa-arrow-right"></i> exceto variáveis criadas pelo IPython
                     <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size:90%;"><in>a = [1,2,3]</in>
                         <in>b = "Olá Mundo"</in>
-                        <in>whos
+                        <in>%whos
 Variable   Type    Data/Info
 ----------------------------
 a          list    n=3
 b          str     Hello
                         </in>
-                        <in>whos list
+                        <in>%whos list
 Variable   Type    Data/Info
 ----------------------------
 a          list    n=3</in></code-terminal>
                 </li>
                 <li class="fragment highlight-current-happy" data-fragment-index="2"><tt>%edit testando.py</tt>: Abre 'testando.py' e executa o código após sair
-                    <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size: 90%;"><in>edit testando.py
+                    <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size: 90%;"><in>%edit testando.py
 Editing... Waiting for Emacs...</in></code-terminal></li>
                 <li class="fragment highlight-current-happy" data-fragment-index="3"><tt>%run testando.py</tt>: Executa testando.py como um script <span class="fragment highlight-current-happy" data-fragment-index="4"><i class="fa fa-arrow-right"></i> Também podemos passar opções como "-p" ou "-t"</span>
-                    <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size: 90%;"><in>cat testando.py  # Vamos ver o conteúdo que salvei no arquivo
+                    <code-terminal class="show-only-if-current-fragment" dontshowcursor style="font-size: 90%;"><in>%cat testando.py  # Vamos ver o conteúdo que salvei no arquivo
 a = 10
 b = 20
 print(a * b)</in>
-                        <in>run testando.py  # TAB completa o nome do arquivo
+                        <in>%run testando.py  # TAB completa o nome do arquivo
 200
                         </in>
-                        <in>whos
+                        <in>%whos
 Variable   Type    Data/Info
 ----------------------------
 a          int     10
 b          int     20</in></code-terminal>
-                    <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="4" dontshowcursor style="font-size: 85%;"><in>run -p testando.py</in>
+                    <code-terminal class="fragment show-only-if-current-fragment" data-fragment-index="4" dontshowcursor style="font-size: 85%;"><in>%run -p testando.py</in>
 Ordered by: internal time
 
 ncalls  tottime  percall  cumtime  percall filename:lineno(function)
