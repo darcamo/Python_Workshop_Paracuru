@@ -1,6 +1,21 @@
 /* Here I put some css code that I have created myself for things similar to
    block/alert block in beamer */
 
+:root {
+    /* Define some variables for the colors */
+    --angry-dark-color: #C43C35;
+    --angry-light-color: #FFD7D5;
+    --moody-dark-color: #F89406;
+    --moody-light-color: #FFECD1;
+    --happy-dark-color: #46a546;
+    --happy-light-color: #C0E0C0;
+
+    /* Defined some variables for paddings, margins, etc. of the boxes */
+    --box-vertical-margin: 15px; /* Default margin for top and bottom of box class */
+    --box-vertical-padding: 0.5em;
+    --box-horizontal-padding: 1em;
+    --label-top-shift: 0.7em;
+}
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /* Add footnote class to make something a footnote */
@@ -47,10 +62,10 @@
    actual text. */
 div.box/* , code */ {
     border-radius: 10px;
-    padding: 0.5em 1em 0.5em 1em;
+    padding: var(--box-vertical-padding) var(--box-horizontal-padding) var(--box-vertical-padding) var(--box-horizontal-padding);
     /* border: 1px solid #ccc; */
-    margin-top: 15px;  /* Set as the amount the label is shifted up */
-    margin-bottom: 15px;
+    margin-top: var(--box-vertical-margin);  /* Set as the amount the label is shifted up */
+    margin-bottom: var(--box-vertical-margin);
     /* font-size: 0.9em; */
     text-align: left;
     color: black;
@@ -66,8 +81,8 @@ div.box/* , code */ {
 /* } */
 
 div.box.labeled {
-    margin-top: 0.8em;          /*Add some top margin to account for the label (which has absolute positioning */
-    padding-top: 0.9em;         /* Just some extra padding to move the content down a bit to account the label */
+    margin-top: calc(var(--box-vertical-margin) + var(--label-top-shift) / 1.6);          /*Add some top margin to account for the label (which has absolute positioning */
+    padding-top: var(--label-top-shift);/* 0.9em; */         /* Just some extra padding to move the content down a bit to account the label */
 }
 
 /* The box content must be either a ul or a p */
@@ -93,40 +108,40 @@ div.box pre {
     white-space: nowrap;
     font-size: 0.75em;
     /* left: 10px; */
-    top: -0.7em;
+    top: calc(-1 * var(--label-top-shift));
 }
 
 .angry.box {
-    background-color: #FFD7D5;
-    border-color: #C43C35;
+    background-color: var(--angry-light-color);
+    /* border-color: var(--angry-dark-color); */
 }
 .happy.box {
-    background-color: #C0E0C0;
-    border-color: #46a546;
+    background-color: var(--happy-light-color);
+    /* border-color: var(--happy-dark-color); */
 }
 .moody.box {
-    background-color: #FFECD1;
-    border-color: #F89406;
+    background-color: var(--moody-light-color);
+    /* border-color: var(--happy-dark-color); */
 }
 .moody .label {
-    background-color: #F89406;
+    background-color: var(--moody-dark-color);
 }
 .happy .label {
-    background-color: #46A546;
+    background-color: var(--happy-dark-color);
 }
 .angry .label {
-    background-color: #C43C35;
+    background-color: var(--angry-dark-color);
 }
 
 /* The alert class does not exist alone */
 .moody.alert {
-    color: #F89406;
+    color: var(--moody-dark-color);
 }
 .happy.alert {
-    color: #46A546;
+    color: var(--happy-dark-color);
 }
 .angry.alert {
-    color: #C43C35;
+    color: var(--angry-dark-color);
 }
 
 /* Add the zeropadded class to the same div that has the box class -> Useful to add a pre block inside a labeled box */
@@ -134,11 +149,11 @@ div.box pre {
     padding: 0 !important;
 }
 .zeropadded.labeled {
-    margin-top: 1.5em !important;
+    margin-top: calc(var(--box-vertical-margin) + 1em) !important;
 }
 .box.zeropadded .label {
-    top: -1.5em;
-    left: 1em;
+    top: calc(-1 * (var(--box-vertical-margin) + 1em));
+    left: var(--box-horizontal-padding);
 }
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
